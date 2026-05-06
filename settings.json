@@ -1,0 +1,21 @@
+{
+  "face_auth_enabled": false,
+  "wake_word_mode": false,
+  "wake_word": "hey sga",
+  "tts_engine": "pyttsx3",
+  "elevenlabs_voice_id": "21m00Tcm4TlvDq8ikWAM",
+  "stt_engine": "google",
+  "whisper_model": "base",
+  "gemini_model": "gemini-2.0-flash-lite",
+  "ollama_model": "mistral",
+  "user_name": "Sir",
+  "assistant_name": "S.G.A",
+  "morning_briefing": true,
+  "default_city": "Asansol",
+  "max_memory": 200,
+  "response_max_tokens": 600,
+  "code_max_tokens": 1500,
+  "stream_responses": true,
+  "groq_model": "llama-3.3-70b-versatile",
+  "debug_mode": false
+}

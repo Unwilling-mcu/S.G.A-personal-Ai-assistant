@@ -1,0 +1,50 @@
+{
+  "name": "sga-assistant",
+  "version": "2.0.0",
+  "description": "S.G.A — Personal AI Assistant",
+  "main": "electron/main.js",
+  "scripts": {
+    "react": "cd frontend && npm start",
+    "backend": "uvicorn backend.server:app --reload",
+    "electron": "electron .",
+    "dev": "concurrently \"npm run react\" \"npm run electron\"",
+    "build": "cd frontend && npm run build",
+    "dist": "npm run build && electron-builder"
+  },
+  "build": {
+    "appId": "com.sga.assistant",
+    "productName": "S.G.A",
+    "win": {
+      "target": "nsis",
+      "icon": "electron/icon.ico"
+    },
+    "files": [
+      "electron/**/*",
+      "frontend/build/**/*",
+      "backend/**/*",
+      "node_modules/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "backend",
+        "to": "backend"
+      },
+      {
+        "from": ".env",
+        "to": ".env"
+      }
+    ]
+  },
+  "keywords": [
+    "ai",
+    "assistant",
+    "jarvis"
+  ],
+  "author": "S.G.A",
+  "license": "KIIT",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "electron": "^41.2.1",
+    "electron-builder": "^26.8.1"
+  }
+}
